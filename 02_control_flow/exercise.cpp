@@ -22,10 +22,73 @@
 
 using namespace std;
 
+
+void Problem1() {
+    cout << "점수를 입력하세요 :";
+    int score;
+    cin >> score;
+
+    if(score>= 90) {
+        cout << "A" << endl;
+    } else if(score >= 80) {
+        cout << "B" << endl;
+    } else if(score >= 70) {
+        cout << "C" << endl;
+    } else if(score >= 60) {
+        cout << "D" << endl;
+    } else {
+        cout << "F" << endl;
+    }
+}
+
+void Problem2() {
+    cout << "1부터 100까지의 합 : " << (100 * (100 + 1) / 2) << endl;
+}
+
+void Problem3() {
+    for(int i = 2; i <= 9; i++) {
+        cout << "[" << i << "단]" << endl;
+        for(int j = 1; j <= 9; j++) {
+            cout << i << " x " << j << " = " << (i * j) << endl;
+        }
+    }
+}
+
+void Problem4() {
+    cout << "숫자를 입력하세요 :";
+    int num;
+    cin >> num;
+    if(num <= 1) {
+        cout << num << "은(는) 소수가 아닙니다." << endl;
+    } else {
+        for(int i = 2; i <= num; i++) {
+            if(num % i == 0) {
+                cout << "소수가 아닙니다." << endl;
+                break;
+            }
+        }
+    }
+}
+
+void Problem5() {
+    for(int i = 1; i <= 5; i++) {
+        for(int j = 1; j <= 5 - i; j++) {
+            cout << " ";
+        }
+        for(int k = 1; k <= 2 * i - 1; k++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
 int main() {
-    // 여기에 코드를 작성하세요
-    
+
+    Problem1();
+    Problem2();
+    Problem3();
+    Problem4();
+    Problem5();
     
     return 0;
 }
-
